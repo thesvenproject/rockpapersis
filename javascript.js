@@ -1,36 +1,13 @@
 
 
-
-
-let number = Math.random() * 100;
+for(i=0;i>5;i++){}
 let humanChoice = prompt("rock paper or scissor");
 humanChoice = humanChoice.toLowerCase();
 let computerChoice = getComputerChoice();
-let humanScore = 0;
-let computerScore = 0;
-let result = playRound();
 
-/*
-//dit deed eigenlijk helemaal niks
-function getHumanChoice(humanChoice) {
-    if (humanChoice.toLowerCase() === "rock"){
-        return "rock";
-    }
-    else if (humanChoice.toLowerCase() === "scissor"){
-        return "scissor";
-    }
-    else if (humanChoice.toLowerCase() ==="paper"){
-        return "paper";
-    }
 
-    else {
-        return ("error");
-    }
-}
-*/
-
-//gets computerChoice value
 function getComputerChoice(computerChoice){
+    let number = Math.random() * 100;
     if ( number <= 33) {
     return "rock";
     }
@@ -51,67 +28,37 @@ function getComputerChoice(computerChoice){
 
 
 
-// did werkt niet, ik krijg de waardes goed terug maar kan niet comparen
+
+ function playGame(){
+    let humanScore = 0;
+    let computerScore = 0;
+
  function playRound(){
-     if (humanChoice === computerChoice){
-       return "its a tie!";
-       
-    }
-   
-// verbeterde versie rock paper playround
-
-    else if (humanChoice === "rock" && computerChoice === "paper" || humanChoice === "scissor" && computerChoice === "rock" || humanChoice === "paper" && computerChoice === "scissor"){
-        computerScore++;
-        //console.log(`Your score: ${humanScore} Computer score: ${computerScore}`);    
-        return "you lost";
-    }
-
-    else {
-            humanScore++;
-            //console.log(`Your score: ${humanScore} Computer score: ${computerScore}`);
-            return "you won";
-    }
+    if (humanChoice === computerChoice){
+      return console.log("Tie");
+      
+   }
+  
 
 
-// oude versie rock paper playround
-   /*
+   else if (humanChoice === "rock" && computerChoice === "paper" || humanChoice === "scissor" && computerChoice === "rock" || humanChoice === "paper" && computerChoice === "scissor"){
+       computerScore++;
+      
+       return console.log("You lost this round.");
+   }
 
-    else if (humanChoice === "rock"){
-        if (computerChoice === "paper"){
-            computerScore = computerScore + 1;
-            return "you lost";
-        }
-        else {
-            humanScore = humanScore + 1;
-            return "you won";
-        }
-    }
+   else {
+           humanScore++;
+          
+           return console.log("You won this round.");
+   }
 
-    else if (humanChoice === "paper"){
-        if (computerChoice === "scissor"){
-            computerScore = computerScore + 1;
-            return "you lost";
-        }
-        else {
-            humanScore = humanScore + 1;
-            return "you won";
-        }
+}
 
-        
-    }
-
-    else if (humanChoice === "scissor"){
-        if (computerChoice === "rock"){
-            computerScore = computerScore + 1;
-            return "you lost";  
-        }
-        else {
-            humanScore = humanScore + 1;
-            return "you won";
-        }
-    } */
-};
-
-
-console.log(`You have chosen: ${humanChoice} & Computer has chosen: ${computerChoice}  = ${result}`);
+playRound();
+console.log(`You have chosen: ${humanChoice} & Computer has chosen: ${computerChoice}`);
 console.log(`Your score: ${humanScore} Computer score: ${computerScore}`);
+ }
+
+playGame();
+
