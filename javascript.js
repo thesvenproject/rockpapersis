@@ -1,9 +1,11 @@
 
 
-for(i=0;i>5;i++){}
-let humanChoice = prompt("rock paper or scissor");
-humanChoice = humanChoice.toLowerCase();
-let computerChoice = getComputerChoice();
+
+function getHumanChoice(humanChoice){
+        
+        return window.prompt("Enter your choice:").toLowerCase()
+        }
+
 
 
 function getComputerChoice(computerChoice){
@@ -29,36 +31,36 @@ function getComputerChoice(computerChoice){
 
 
 
- function playGame(){
+function playGame(){
     let humanScore = 0;
     let computerScore = 0;
 
- function playRound(){
+function playRound(humanChoice, computerChoice){
     if (humanChoice === computerChoice){
-      return console.log("Tie");
+      return ("Tie");
       
    }
   
 
 
    else if (humanChoice === "rock" && computerChoice === "paper" || humanChoice === "scissor" && computerChoice === "rock" || humanChoice === "paper" && computerChoice === "scissor"){
-       computerScore++;
-      
-       return console.log("You lost this round.");
+       computerScore++;      
+       return ("You lost this round.");
    }
 
    else {
-           humanScore++;
-          
-           return console.log("You won this round.");
+        humanScore++;
+        return ("You won this round.");
    }
 
 }
-
-playRound();
+for (i=0;i<5;i++){
+const humanChoice = getHumanChoice();
+const computerChoice = getComputerChoice();
+console.log(playRound(humanChoice, computerChoice));
 console.log(`You have chosen: ${humanChoice} & Computer has chosen: ${computerChoice}`);
 console.log(`Your score: ${humanScore} Computer score: ${computerScore}`);
- }
-
+}
+}
 playGame();
 
