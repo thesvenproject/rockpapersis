@@ -60,6 +60,15 @@ const computerChoice = getComputerChoice();
 console.log(playRound(humanChoice, computerChoice));
 console.log(`You have chosen: ${humanChoice} & Computer has chosen: ${computerChoice}`);
 console.log(`Your score: ${humanScore} Computer score: ${computerScore}`);
+
+}
+if (i==5){
+    if(humanScore>computerScore){
+        console.log("You won this game!");
+    }
+    if(humanScore<computerScore){
+        console.log("Computer won this game!"); 
+    }
 }
 }
 playGame();
