@@ -37,7 +37,7 @@ function playGame(){
 
 function playRound(humanChoice, computerChoice){
     if (humanChoice === computerChoice){
-      return ("Tie");
+      return ("It's a tie.");
       
    }
   
@@ -68,6 +68,9 @@ if (i==5){
     }
     if(humanScore<computerScore){
         console.log("Computer won this game!"); 
+    }
+    else{
+        console.log("This game is a draw.")
     }
 }
 }
