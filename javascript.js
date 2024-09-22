@@ -64,13 +64,13 @@ console.log(`Your score: ${humanScore} Computer score: ${computerScore}`);
 }
 if (i==5){
     if(humanScore>computerScore){
-        console.log("You won this game!");
+        alert("You won this game!");
     }
     if(humanScore<computerScore){
-        console.log("Computer won this game!"); 
+        alert("Computer won this game!"); 
     }
     else{
-        console.log("This game is a draw.")
+        alert("This game is a draw.")
     }
 }
 }
